@@ -699,6 +699,7 @@ class DropdownSheet<T> extends StatelessWidget {
 ///  * [showModalBottomSheet], for displaying modal bottom sheets.
 ///  * [SheetModel], the data model used by this widget.
 ///  * [ValueNotifier], for managing state in Flutter applications.
+// ignore: must_be_immutable
 class SelectionBottomSheet extends StatefulWidget {
   /// Creates a SelectionBottomSheet widget.
   ///
