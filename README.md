@@ -63,58 +63,37 @@ DropdownSheet<SheetModel>(
 ## Media
 
 ### Single Selection
-
-#### Image
-
-![Single Selection](assets/example/selection_image_1.png)
-
-#### GIF
-
-![Single Selection GIF](assets/example/single_selection.gif)
-
----
-
-### Selection with Search Bar
-
-![Selection with Search Bar](assets/example/selection_image_2_with_search_bar.png)
-
----
-
-### Single Selection with Loading
-
-![Single Selection with Loading](assets/example/single_selection_with_loading.gif)
-
----
+<p align="center">
+  <img src="assets/example/selection_image_1.png" width="220"/>
+  <img src="assets/example/single_selection.gif" width="220"/>
+</p>
 
 ### Multiple Selection
-
-#### Image
-
-![Multiple Selection](assets/example/multiple_image_1.png)
-
-#### GIF
-
-![Multiple Selection GIF](assets/example/multiple_selection.gif)
-
----
+<p align="center">
+  <img src="assets/example/multiple_image_1.png" width="220"/>
+  <img src="assets/example/multiple_selection.gif" width="220"/>
+</p>
 
 ### Customizable
+<p align="center">
+  <img src="assets/example/customizable_image_1.png" width="220"/>
+  <img src="assets/example/customizable.gif" width="220"/>
+</p>
 
-#### Image
+### Selection with Search Bar
+<p align="center">
+  <img src="assets/example/selection_image_2_with_search_bar.png" width="220"/>
+</p>
 
-![Customizable](assets/example/customizable_image_1.png)
-
-#### GIF
-
-![Customizable GIF](assets/example/customizable.gif)
-
----
+### Single Selection with Loading
+<p align="center">
+  <img src="assets/example/single_selection_with_loading.gif" width="220"/>
+</p>
 
 ### Other Selection Screen
-
-![Selection Screen 3](assets/example/selection_image_3.png)
-
----
+<p align="center">
+  <img src="assets/example/selection_image_3.png" width="220"/>
+</p>
 
 <!-- Add more media as needed using the same format. -->
 
