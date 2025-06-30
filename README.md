@@ -63,36 +63,42 @@ DropdownSheet<SheetModel>(
 ## Media
 
 ### Single Selection
+
 <p align="center">
-  <img src="assets/example/selection_image_1.png" width="220"/>
-  <img src="assets/example/single_selection.gif" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/selection_image_1.png" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/single_selection.gif" width="220"/>
 </p>
 
 ### Multiple Selection
+
 <p align="center">
-  <img src="assets/example/multiple_image_1.png" width="220"/>
-  <img src="assets/example/multiple_selection.gif" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/multiple_image_1.png" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/multiple_selection.gif" width="220"/>
 </p>
 
 ### Customizable
+
 <p align="center">
-  <img src="assets/example/customizable_image_1.png" width="220"/>
-  <img src="assets/example/customizable.gif" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/customizable_image_1.png" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/customizable.gif" width="220"/>
 </p>
 
 ### Selection with Search Bar
+
 <p align="center">
-  <img src="assets/example/selection_image_2_with_search_bar.png" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/selection_image_2_with_search_bar.png" width="220"/>
 </p>
 
 ### Single Selection with Loading
+
 <p align="center">
-  <img src="assets/example/single_selection_with_loading.gif" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/single_selection_with_loading.gif" width="220"/>
 </p>
 
 ### Other Selection Screen
+
 <p align="center">
-  <img src="assets/example/selection_image_3.png" width="220"/>
+  <img src="https://raw.githubusercontent.com/bilalozcan/dropdown_sheet/main/assets/example/selection_image_3.png" width="220"/>
 </p>
 
 <!-- Add more media as needed using the same format. -->
@@ -228,119 +234,4 @@ Flutter için özelleştirilebilir, arama destekli ve çoklu seçimli modern bir
 ```yaml
 dependencies:
   dropdown_sheet: ^0.0.1
-```
-
-### Temel Kullanım
-
-```dart
-import 'package:dropdown_sheet/dropdown_sheet.dart';
-
-final ValueNotifier<SheetModel?> selectedCountry = ValueNotifier(null);
-final List<SheetModel> countries = [
-  SheetModel(id: '1', name: 'Türkiye'),
-  SheetModel(id: '2', name: 'Almanya'),
-  SheetModel(id: '3', name: 'Fransa'),
-];
-
-DropdownSheet<SheetModel>(
-  title: 'Ülke Seçiniz',
-  values: countries,
-  notifier: selectedCountry,
-  onChanged: () {
-    print('Seçilen ülke: \\${selectedCountry.value?.name}');
-  },
-)
-```
-
-### Çoklu Seçim ve Arama
-
-```dart
-final ValueNotifier<List<SheetModel>> selectedLanguages = ValueNotifier([]);
-final List<SheetModel> languages = [
-  SheetModel(id: '1', name: 'Türkçe'),
-  SheetModel(id: '2', name: 'İngilizce'),
-  SheetModel(id: '3', name: 'Almanca'),
-];
-
-DropdownSheet<SheetModel>(
-  title: 'Diller',
-  values: languages,
-  notifier: selectedLanguages,
-  isMultiSelect: true,
-  showSearch: true,
-  onChanged: () {
-    print('Seçilen diller: \\${selectedLanguages.value.map((e) => e.name).join(", ")}');
-  },
-)
-```
-
-### Yükleniyor Durumu
-
-```dart
-final ValueNotifier<bool> isLoading = ValueNotifier(false);
-
-DropdownSheet<SheetModel>(
-  title: 'Şehirler',
-  values: cities,
-  notifier: selectedCity,
-  loadingNotifier: isLoading,
-  onChanged: () {
-    print('Seçilen şehir: \\${selectedCity.value?.name}');
-  },
-)
-```
-
-### Dinamik Veri
-
-```dart
-DropdownSheet<SheetModel>(
-  title: 'İlçeler',
-  dynamicValues: () => fetchDistricts(),
-  notifier: selectedDistrict,
-  onChanged: () {
-    print('Seçilen ilçe: \\${selectedDistrict.value?.name}');
-  },
-)
-```
-
-### Parametreler
-
-| Parametre | Tip | Açıklama |
-|-----------|-----|----------|
-| `title` | `String` | Dropdown başlığı |
-| `values` | `List<dynamic>?` | Seçenekler listesi |
-| `dynamicValues` | `List<dynamic>? Function()?` | Dinamik veri fonksiyonu |
-| `notifier` | `ValueNotifier` | Seçili değeri tutar |
-| `onChanged` | `Function?` | Seçim değişince çağrılır |
-| `isMultiSelect` | `bool` | Çoklu seçim |
-| `showSearch` | `bool` | Arama kutusu |
-| `isLoading` | `bool` | Yükleniyor durumu |
-| `loadingNotifier` | `ValueNotifier<bool>?` | Yükleniyor notifier |
-| ... | ... | Daha fazla parametre için kodu inceleyin |
-
-### SheetModel
-
-```dart
-class SheetModel {
-  final String id;
-  final String name;
-  SheetModel({required this.id, required this.name});
-}
-```
-
-### Gelişmiş Kullanım
-
-```dart
-showModalBottomSheet(
-  context: context,
-  builder: (context) => SelectionBottomSheet(
-    title: 'Bir ülke seçin',
-    values: countries,
-    showSearch: true,
-    onChanged: (selected) {
-      print('Seçilen: \\${selected.name}');
-      Navigator.pop(context);
-    },
-  ),
-);
 ```
