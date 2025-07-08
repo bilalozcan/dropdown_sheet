@@ -1,6 +1,6 @@
 name: dropdown_sheet
 description: "A customizable dropdown sheet widget for Flutter with search functionality and multiple selection support."
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/bilalozcan/dropdown_sheet
 repository: https://github.com/bilalozcan/dropdown_sheet
 issue_tracker: https://github.com/bilalozcan/dropdown_sheet/issues
@@ -55,3 +55,7 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/to/font-from-package
+
+platforms:
+  android:
+  ios:
