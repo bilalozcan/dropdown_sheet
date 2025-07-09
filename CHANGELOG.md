@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.5+1] - 2024-07-09
+
+- Fixed withValues ​​error for versions lower than Flutter 3.19.0
+
 ## [0.0.5] - 2024-07-09
 
 - Minimum Dart SDK version lowered to 2.17.0
