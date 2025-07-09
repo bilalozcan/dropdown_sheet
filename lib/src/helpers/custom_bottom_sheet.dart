@@ -1,6 +1,5 @@
 import 'package:dropdown_sheet/src/constants/layout_constants.dart';
 import 'package:dropdown_sheet/src/extension/context_extension.dart';
-import 'package:dropdown_sheet/src/extension/color_with_values_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -14,7 +13,8 @@ class CustomBottomSheet {
     return showModalBottomSheet<T>(
       context: context,
       backgroundColor: context.colorScheme.onPrimary,
-      barrierColor: context.colorScheme.onSecondary.withValues(alpha: 0.85),
+      // ignore: deprecated_member_use
+      barrierColor: context.colorScheme.onSecondary.withOpacity(0.85),
       isScrollControlled: true,
       isDismissible: isDismissible,
       enableDrag: isDismissible,

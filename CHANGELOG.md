@@ -2,7 +2,7 @@
 
 ## [0.0.5+1] - 2024-07-09
 
-- Fixed withValues ​​error for versions lower than Flutter 3.19.0
+- Fixed withValues ​​error
 
 ## [0.0.5] - 2024-07-09
 

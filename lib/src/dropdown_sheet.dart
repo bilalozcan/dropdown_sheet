@@ -5,7 +5,6 @@ import 'package:dropdown_sheet/src/constants/layout_constants.dart';
 import 'package:dropdown_sheet/src/helpers/custom_bottom_sheet.dart';
 import 'package:dropdown_sheet/src/extension/context_extension.dart';
 import 'package:dropdown_sheet/src/extension/widget_extension.dart';
-import 'package:dropdown_sheet/src/extension/color_with_values_extension.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -485,7 +484,8 @@ class DropdownSheet<T> extends StatelessWidget {
           color: backgroundColor,
           borderRadius: borderRadius != null ? BorderRadius.circular(borderRadius!) : LayoutConstants.border16Button,
           border: Border.all(
-            color: borderColor ?? context.colorScheme.tertiary.withValues(alpha: 0.25),
+            // ignore: deprecated_member_use
+            color: borderColor ?? context.colorScheme.tertiary.withOpacity(0.25),
             width: borderWidth ?? 1,
           ),
         ),
